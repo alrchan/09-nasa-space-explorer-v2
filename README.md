@@ -56,7 +56,8 @@ The goal is to ensure users can easily access or clearly view content regardless
 
 ## Local changes made during development
 
-- A resized header image was created: `img/NASA-Logo-Large-360.jpg` (360px wide) to make the page load a smaller logo and better fit three thumbnails per row.
-- The original `img/NASA-Logo-Large.jpg` was left untouched. To revert the header to the original file, edit `index.html` and change the header image src back to `img/NASA-Logo-Large.jpg`.
+
+- The header image `img/NASA-Logo-Large.jpg` was resized (overwritten) to 360px wide to reduce header footprint and better fit the layout.
+- To restore the original high-resolution image, replace `img/NASA-Logo-Large.jpg` with your backup of the original file (no automatic revert is available in this repo).
 
 
