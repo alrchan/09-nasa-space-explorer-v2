@@ -54,3 +54,9 @@ The goal is to ensure users can easily access or clearly view content regardless
 * **Display the Gallery:** For each item, show the image (or video thumbnail/player), title, and date.
 
 
+## Local changes made during development
+
+- A resized header image was created: `img/NASA-Logo-Large-360.jpg` (360px wide) to make the page load a smaller logo and better fit three thumbnails per row.
+- The original `img/NASA-Logo-Large.jpg` was left untouched. To revert the header to the original file, edit `index.html` and change the header image src back to `img/NASA-Logo-Large.jpg`.
+
+
