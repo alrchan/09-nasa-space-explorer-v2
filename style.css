@@ -96,30 +96,39 @@ button:hover {
   justify-content: center;
 }
 
-/* Gallery items */
-.gallery-item {
-  flex: 1 1 100%;  /* full width by default */
-  min-width: 280px;
-  max-width: 500px;
+/* Gallery items: apply to different possible item types so CSS works whether items are .gallery-item, .card, or plain article elements */
+.gallery > *,
+.gallery .gallery-item,
+.gallery .card,
+.gallery article {
+  flex: 1 1 100%; /* stack by default */
+  min-width: 220px;
   background: white;
-  padding: 10px;
+  padding: 8px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 }
 
-.gallery-item img {
+/* Thumbnails inside the gallery (catch images regardless of wrapper class) */
+.gallery img {
   width: 100%;
-  height: 120px; /* smaller images */
+  height: 120px;
   object-fit: cover;
   border-radius: 4px;
+  display: block;
 }
 
 /* Three columns on medium and wider screens */
 @media (min-width: 700px) {
-  .gallery-item {
+  /* roughly three columns (with gaps) */
+  .gallery > *,
+  .gallery .gallery-item,
+  .gallery .card,
+  .gallery article {
     flex: 0 1 30%;
     min-width: 0;
     max-width: none;
